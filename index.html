@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=
     , initial-scale=1.0">
-    <link rel="stylesheet" href="estilos css/estilos.css">
+    <link rel="stylesheet" type="text/css" href="estilos css/estilos.css">
+    <link rel="stylesheet" type="text/css" href="estilos css/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="estilos css/slick.css">
     
     <title>Panamá Escuela de Idiomas</title>
 </head>
@@ -33,10 +35,10 @@
                         <a href="../tp integrador/index.html">Home</a>
                     </li>
                     <li>
-                        <a href="../tp integrador/establecimientos.html">Establecimientos</a>
+                        <a href="../tp integrador/inscripcion.html">Inscripción</a>
                     </li>
                     <li>
-                        <a href="../tp integrador/inscripcion.html">Inscripción</a>
+                        <a href="../tp integrador/establecimientos.html">Establecimientos</a>
                     </li>
                     <li>
                         <a href="../tp integrador/calendario.html">Calendario</a>
@@ -53,7 +55,12 @@
     </header>
     <main>
         <section>
-       <img src="img/inscripcion.png" alt="inscripcion" class="carrousel">
+            <div class="slider">
+               <div><img src="img/inscripcion.png" alt="inscripcion" class="carrousel"></div>
+               <div><img src="img/establecimientosCarrousel.png" alt="inscripcion" class="carrousel"></div>
+               <div><img src="img/calendarioCarrousel.png" alt="inscripcion" class="carrousel"></div>    
+            </div>
+       
     </section>
     <h2 class="titulo-secundario">¡Bienvenido a Panamá Escuela de Idiomas!</h2>
     <section class="pasos-general">
@@ -186,5 +193,9 @@
 
         </section>
     </footer>
+    <link rel="stylesheet" type="text/javascript" href="js/index.js">
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    
 </body>
 </html>

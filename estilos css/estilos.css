@@ -6,14 +6,18 @@
      font-family: 'Jost', sans-serif;
      
  }
+ body{
+     font-size: 80%;
+ }
 
 .logo1{
-    height: 80px;
+    height: 5em;
     margin: 1%;
     padding: 0%;
 }
 .logo2{
-    height: 30px;  
+    height: 1.875em;  
+
 }
 .navright{
  float: right;
@@ -36,7 +40,7 @@ header{
     font-size: 1.5em;
     font-family: 'Jost', sans-serif;
     padding: 1%;
-    width: 500px;
+   
     margin-top: 0.8em;
 }
 .a1{
@@ -51,6 +55,7 @@ header{
     justify-content: space-evenly;
     width: 10em;
     align-items: center;
+    content-visibility: hidden;
 }
 .divisor{
     display: flex;
@@ -87,7 +92,7 @@ header{
     text-align: center;
 }
 .pasos-general{
-    display: flex;
+    /*display: flex;*/
     justify-content: center;
     margin: 4em;
     align-content: space-between;
@@ -140,7 +145,10 @@ footer{
     margin-bottom: 4em;
     padding-left: 0.5em;
     background-color: rgb(87, 187, 182);
+    font-size: 80%
 }
+
+
 .bci{
     background-color: #cef8f3;
     border:solid #b0f0e8 ;
@@ -166,4 +174,49 @@ footer{
     justify-content: center;
     padding-top: 0.5em;
     
+}
+
+@media screen and (min-width:48em){
+    body{
+        font-size: 100%;
+    }
+
+     nav{
+         content-visibility: visible;
+     }
+    .iconos{
+        content-visibility: visible;  
+    }
+    .titulo{
+        width: 31.25em;
+    }
+    .establecimientos{
+        font-size:100%;
+    }
+    .pasos-general{
+        display: flex; 
+    }
+
+}
+
+@media screen and (min-width:60em){
+    body{
+        font-size: 100%;
+    }
+    nav{
+        content-visibility: visible;
+    }
+    .iconos{
+        content-visibility: visible;      
+    }
+    .titulo{
+        width: 31.25em;
+    }
+    .establecimientos{
+        font-size:100%;
+    }
+    .pasos-general{
+        display: flex; 
+    }
+
 }

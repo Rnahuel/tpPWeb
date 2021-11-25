@@ -56,7 +56,7 @@ function filtrar(){
   $(`#psede .${sede}.${idioma}`).show();
 }
 
-
+/*filtrar solo por establecimiento*/
 /*function filtrar(){
 
 

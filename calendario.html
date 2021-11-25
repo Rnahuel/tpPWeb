@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos css/calendario.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/funcion.js"></script>
     <title>Calendario de Cursos</title>
 </head>
 
@@ -27,23 +29,23 @@
         <section class="nav">
             <nav>
                 <ul class="menu">
-                    <li class="navPag">
-                        <a href="../tpPWeb/index.html">Home</a>
+                    <li>
+                        <a href="index.html">Home</a>
                     </li>
-                    <li class="navPag">
-                        <a href="../tpPWeb/inscripcion.html">Inscripción</a>
+                    <li>
+                        <a href="establecimientos.html">Establecimientos</a>
                     </li>
-                    <li class="navPag">
-                        <a href="../tpPWeb/establecimientos.html">Establecimientos</a>
+                    <li>
+                        <a href="inscripcion.html">Inscripción</a>
                     </li>
-                    <li class="navPag">
-                        <a href="../tpPWeb/calendario.html">Calendario</a>
+                    <li>
+                        <a href="calendario.html">Calendario</a>
                     </li>
-                    <li class="navPag">
-                        <a href="../tpPWeb/contacto.html">Contacto</a>
+                    <li>
+                        <a href="contacto.html">Contacto</a>
                     </li>
-                    <li class="navPag">
-                        <a href="../tpPWeb/nosotros.html">Nosotros</a>
+                    <li>
+                        <a href="nosotros.html">Nosotros</a>
                     </li>
                 </ul>
             </nav>
@@ -55,28 +57,29 @@
             <article>
                 <form action="#" class="filtro">
                     <p>filtrar por</p>
-                    <select name="sede" id="sede">
-                        <option value="">Establecimiento</option>
-                        <option value="1">Belgrano - C.A.B.A.</option>
-                        <option value="2">Catán - La Matanza</option>
-                        <option value="3">Mataderos - C.A.B.A.</option>
-                        <option value="4">San Justo - La Matanza</option>
+                    <select name="sede" id="sedeFiltro">
+                        <option value="0">Establecimiento</option>
+                        <option value="belgrano">Belgrano - C.A.B.A.</option>
+                        <option value="catan">Catán - La Matanza</option>
+                        <option value="mataderos">Mataderos - C.A.B.A.</option>
+                        <option value="sanJusto">San Justo - La Matanza</option>
                     </select>
-                    <select name="sede" id="sede">
-                        <option value="">Idioma...</option>
-                        <option value="1">Inglés</option>
-                        <option value="2">Italiano</option>
-                        <option value="3">Japonés</option>
-                        <option value="4">Portugués</option>
+                    <select name="sede" id="idiomaFiltro">
+                        <option value="">Idioma</option>
+                        <option value="ingles" >Inglés</option>
+                        <option value="italiano">Italiano</option>
+                        <option value="japones">Japonés</option>
+                        <option value="portugues">Portugués</option>
                     </select>
+                    <input type="submit" value="Enviar" id="filtrando" class="selec2" >
                 </form>
             </article>
         </section>
         <section class="seccion1">
             <h2 class="meses">Marzo 2022</h2>
             <article class="cuadrantes">
-                <img src="img/italia1.png" alt="italia" class="imagenpequenia">
-                <aside class="letras">
+                <img src="img/italia1.png" alt="italia" class="imagenpequenia sanJusto italiano" id="imgsede">
+                <aside class="letras sanJusto italiano" id="psede">
                     <h3>Italiano - Nivel 1</h3>
                     <ul class="listafooter">
                         <li>Modalidad: Presencial</li>
@@ -85,10 +88,10 @@
                         <li>Sede: San Justo </li>
                         <li class="li1">Precio:$0000</li>
                     </ul>
-                    <a href="../tpPWeb/inscripcion.html"> <button type="button" class="boton-sede">Inscribirse</button> </a>
+                    <a href="inscripcion.html"> <button type="button" class="boton-sede">Inscribirse</button> </a>
                 </aside>
-                <img src="img/japon1.png" alt="japon" class="imagenpequenia">
-                <aside class="letras">
+                <img src="img/japon1.png" alt="japon" class="imagenpequenia sanJusto japones" id="imgsede">
+                <aside class="letras sanJusto japones" id="psede">
                     <h3>Japonés - Nivel 1</h3>
                     <ul class="listafooter">
                         <li>Modalidad: Presencial</li>
@@ -97,88 +100,88 @@
                         <li>Sede: San Justo </li>
                         <li class="li1">Precio:$0000</li>
                     </ul>
-                    <a href="../tpPWeb/inscripcion.html"> <button type="button" class="boton-sede">Inscribirse</button> </a>
+                    <a href="inscripcion.html"> <button type="button" class="boton-sede">Inscribirse</button> </a>
                 </aside>
             </article>
             <article class="cuadrantes">
-                <img src="img/uk1.png" alt="uk" class="imagenpequenia">
-                <aside class="letras">
+                <img src="img/uk1.png" alt="uk" class="imagenpequenia" id="belgrano ingles" id="imgsede">
+                <aside class="letras belgrano ingles" id="psede">
                     <h3>Inglés - Nivel 1</h3>
                     <ul class="listafooter">
                         <li>Modalidad: Presencial</li>
                         <li>Dia y horarios: Lu-Ju 17hs</li>
                         <li>Fecha de inicio: 08/03/2022</li>
-                        <li>Sede: San Justo </li>
+                        <li>Sede: Belgrano </li>
                         <li class="li1">Precio:$0000</li>
                     </ul>
-                    <a href="../tpPWeb/inscripcion.html"> <button type="button" class="boton-sede">Inscribirse</button> </a>
+                    <a href="inscripcion.html"> <button type="button" class="boton-sede">Inscribirse</button> </a>
                 </aside>
-                <img src="img/brasil1.png" alt="brasil" class="imagenpequenia">
-                <aside class="letras">
+                <img src="img/brasil1.png" alt="brasil" class="imagenpequenia belgrano portugues" id="imgsede">
+                <aside class="letras belgrano portugues" id="psede">
                     <h3>Portugués - Nivel 1</h3>
                     <ul class="listafooter">
                         <li>Modalidad: Presencial</li>
                         <li>Dia y horarios: Lu-Ju 17hs</li>
                         <li>Fecha de inicio: 08/03/2022</li>
-                        <li>Sede: San Justo </li>
+                        <li>Sede: Belgrano </li>
                         <li class="li1">Precio:$0000</li>
                     </ul>
-                    <a href="../tpPWeb/inscripcion.html"> <button type="button" class="boton-sede">Inscribirse</button> </a>
+                    <a href="inscripcion.html"> <button type="button" class="boton-sede">Inscribirse</button> </a>
                 </aside>
             </article>
         </section>
         <section class="seccion1">
             <h2 class="meses">Abril 2022</h2>
             <article class="cuadrantes">
-                <img src="img/italia2.png" alt="italia" class="imagenpequenia">
-                <aside class="letras">
+                <img src="img/italia2.png" alt="italia" class="imagenpequenia catan italiano" id="imgsede">
+                <aside class="letras catan italiano" id="psede">
                     <h3>Italiano - Nivel 2</h3>
                     <ul class="listafooter">
                         <li>Modalidad: Presencial</li>
                         <li>Dia y horarios: Lu-Ju 17hs</li>
                         <li>Fecha de inicio: 01/04/2022</li>
-                        <li>Sede: San Justo </li>
+                        <li>Sede: Catan </li>
                         <li class="li1">Precio:$0000</li>
                     </ul>
-                    <a href="../tpPWeb/inscripcion.html"> <button type="button" class="boton-sede">Inscribirse</button> </a>
+                    <a href="inscripcion.html"> <button type="button" class="boton-sede">Inscribirse</button> </a>
                 </aside>
-                <img src="img/japon2.png" alt="japon" class="imagenpequenia">
-                <aside class="letras">
+                <img src="img/japon2.png" alt="japon" class="imagenpequenia catan Japon" id="imgsede">
+                <aside class="letras catan japon" id="psede">
                     <h3>Japonés - Nivel 2</h3>
                     <ul class="listafooter">
                         <li>Modalidad: Presencial</li>
                         <li>Dia y horarios: Lu-Ju 17hs</li>
                         <li>Fecha de inicio: 01/04/2022</li>
-                        <li>Sede: San Justo </li>
+                        <li>Sede: Catan </li>
                         <li class="li1">Precio:$0000</li>
                     </ul>
-                    <a href="../tpPWeb/inscripcion.html"> <button type="button" class="boton-sede">Inscribirse</button> </a>
+                    <a href="inscripcion.html"> <button type="button" class="boton-sede">Inscribirse</button> </a>
                 </aside>
             </article>
             <article class="cuadrantes">
-                <img src="img/uk2.png" alt="uk" class="imagenpequenia">
-                <aside class="letras">
+                <img src="img/uk2.png" alt="uk" class="imagenpequenia mataderos ingles" id="imgsede">
+                <aside class="letras mataderos ingles" id="psede">
                     <h3>Inglés - Nivel 2</h3>
                     <ul class="listafooter">
                         <li>Modalidad: Presencial</li>
                         <li>Dia y horarios: Lu-Ju 17hs</li>
                         <li>Fecha de inicio: 01/04/2022</li>
-                        <li>Sede: San Justo </li>
+                        <li>Sede: Mataderos </li>
                         <li class="li1">Precio:$0000</li>
                     </ul>
-                    <a href="../tpPWeb/inscripcion.html"> <button type="button" class="boton-sede">Inscribirse</button> </a>
+                    <a href="inscripcion.html"> <button type="button" class="boton-sede">Inscribirse</button> </a>
                 </aside>
-                <img src="img/brasil2.png" alt="brasil" class="imagenpequenia">
-                <aside class="letras">
+                <img src="img/brasil2.png" alt="brasil" class="imagenpequenia mataderos portugues" id="imgsede">
+                <aside class="letras mataderos portugues" id="psede">
                     <h3>Portugués - Nivel 2</h3>
                     <ul class="listafooter">
                         <li>Modalidad: Presencial</li>
                         <li>Dia y horarios: Lu-Ju 17hs</li>
                         <li>Fecha de inicio: 01/04/2022</li>
-                        <li>Sede: San Justo </li>
+                        <li>Sede: Mataderos </li>
                         <li class="li1">Precio:$0000</li>
                     </ul>
-                    <a href="../tpPWeb/inscripcion.html"> <button type="button" class="boton-sede">Inscribirse</button> </a>
+                    <a href="inscripcion.html"> <button type="button" class="boton-sede">Inscribirse</button> </a>
                 </aside>
             </article>
         </section>
@@ -197,10 +200,10 @@
             <article>
                 <h4>Menu Inferior:</h4>
                 <ul class="listafooter">
-                    <a href="../tpPWeb/establecimientos.html"><li>Establecimientos</li></a>
-                    <a href="../tpPWeb/inscripcion.html"><li>Inscripcion</li></a>
-                    <a href="../tpPWeb/calendario.html"><li>Calendario</li></a>
-                    <a href="../tpPWeb/contacto.html"><li>Contacto</li></a>
+                    <a href="establecimientos.html"><li>Establecimientos</li></a>
+                    <a href="inscripcion.html"><li>Inscripcion</li></a>
+                    <a href="calendario.html"><li>Calendario</li></a>
+                    <a href="contacto.html"><li>Contacto</li></a>
                 </ul>
             </article>
 

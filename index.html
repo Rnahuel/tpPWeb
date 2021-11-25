@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="estilos css/estilos.css">
     <link rel="stylesheet" type="text/css" href="estilos css/slick-theme.css">
     <link rel="stylesheet" type="text/css" href="estilos css/slick.css">
@@ -120,33 +119,35 @@
     <section class="bci">
         <h2 class="titulo-secundario1">Busca el curso e inscribite</h2> 
         <article class="articlebci">
-        <article>
+        <article class="articlebci1" id="info">
                 <h4>Datos de contacto</h4>
                 <ul class="listafooter">
+                <div id="dictef">
                 <li>Dirección: Av. Mariano Santamaría 2791 </li>
-                <li>Teléfono: 4441-5555 </li>
+                <li >Teléfono: 4441-5555 </li>
+                </div>
                 <li>Email: aprendeidiomas@gmail.com </li>
                 <li>Web:  </li>
                 </ul>
         </article>
-        <article>
-            <form action="#">
+        <article class="articlebci1">
+            <form action="inscripcion.html" >
                 <label for="sede" class="selec2">Seleccione su sede de interés</label>
                 <select name="sede" class="selec1" id="sede">
                     <option value="">Sede...</option>
-                    <option value="1">Belgrano - C.A.B.A.</option>
-                    <option value="2">Catán - La Matanza</option>
-                    <option value="3">Mataderos - C.A.B.A.</option>
-                    <option value="4">San Justo - La Matanza</option>
+                    <option value="Belgrano">Belgrano - C.A.B.A.</option>
+                    <option value="Catán">Catán - La Matanza</option>
+                    <option value="Mataderos">Mataderos - C.A.B.A.</option>
+                    <option value="San Justo">San Justo - La Matanza</option>
                 </select>
                 <br>
                 <label for="idioma" class="selec2">Seleccione su idioma de interés</label>
                 <select name="idioma" class="selec1" id="idioma">
-                    <option value="">Idioma...</option>
-                    <option value="1">Inglés</option>
-                    <option value="2">Italiano</option>
-                    <option value="3">Japonés</option>
-                    <option value="4">Portugués</option>
+                    <option value="0">Idioma...</option>
+                    <option value="1" id="idiomaIngles">Inglés</option>
+                    <option value="2" id="idiomaItaliano">Italiano</option>
+                    <option value="3" id="idiomaJapones">Japonés</option>
+                    <option value="4" id="idiomaPortugues">Portugués</option>
                 </select>
                 <br>
                 <label for="horarios" class="selec2">Seleccione sus horarios y modalidad</label>
@@ -162,7 +163,7 @@
                 <br>
                 <input type="text" id="precio" value="$0000" readonly>
                 
-                <input type="submit" value="Enviar" class="selec2">
+                <input type="submit" value="Enviar" id="botoninscrip" class="selec2" >
             </form>
         </article>
     </article>
@@ -192,7 +193,7 @@
 
             <article >
                 <h4 class="redsocial">Redes Sociales:</h4>
-               <div class="iconos">
+               <div class="iconos1">
                     <img src="img/social_facebook_fb_75.png" class="logo2" alt="redessociales">
                     <img src="img/social_instagram_43.png" class="logo2" alt="redessociales2">
                     <img src="img/social_youtube_63.png" class="logo2" alt="redessociales3">

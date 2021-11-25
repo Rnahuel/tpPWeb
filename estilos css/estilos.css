@@ -16,7 +16,8 @@
     padding: 0%;
 }
 .logo2{
-    height: 1.875em;  
+    height: 1.875em;
+    padding-right: 0.3em;  
 
 }
 .navright{
@@ -40,7 +41,7 @@ header{
     font-size: 1.5em;
     font-family: 'Jost', sans-serif;
     padding: 1%;
-   
+    display: none;
     margin-top: 0.8em;
 }
 .a1{
@@ -57,6 +58,13 @@ header{
     align-items: center;
     content-visibility: hidden;
 }
+.iconos1{
+    display: flex;
+    justify-content: center;
+    /*width: 10em;*/
+    align-items: center;
+    
+}
 .divisor{
     display: flex;
 }
@@ -65,7 +73,7 @@ header{
     
     flex-direction: column; 
     display: none;
-    width: 100% ;
+   /*width: 100% ;*/
     text-align: center;
     padding: 0.3em;
      /* justify-content: space-between;*/
@@ -130,7 +138,8 @@ header{
 
 .footer{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
 }
 .redsocial{
     text-align: center;
@@ -162,10 +171,12 @@ footer{
 }
 .articlebci{
     display: flex;
-    align-content: center;
-    justify-content: space-around;
     padding: 1em;
-
+    flex-direction: column;
+    text-align: center;
+}
+.articlebci1{
+    padding-top: 1em;
 }
 .selec1{
     margin: 0.1em;
@@ -215,7 +226,8 @@ footer{
         content-visibility: visible;  
     }
     .titulo{
-        width: 31.25em;
+        /*width: 31.25em;*/
+
     }
     .establecimientos{
         font-size:100%;
@@ -225,11 +237,15 @@ footer{
     }
     /*con esto escondes el nav*/
     .menuLinea{
-        display: block;
+        display: none;
     }
     .menu{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        flex-direction: inherit;
+    }
+    .navPag{
+        padding-right: 1em;
     }
    
 }
@@ -245,7 +261,8 @@ footer{
         content-visibility: visible;      
     }
     .titulo{
-        width: 31.25em;
+       width: 31.25em;
+       display: block;
     }
     .establecimientos{
         font-size:100%;
@@ -256,5 +273,19 @@ footer{
     /*con esto escondes el nav*/
     .menuLinea{
         display: none;
+    }
+    .navPag{
+        padding-right: 1em;
+    }
+    .footer{
+        justify-content: space-between;
+        flex-direction: inherit;
+        text-align: inherit;
+    }
+    .articlebci{
+        justify-content: space-evenly;
+        flex-direction: inherit;
+        text-align: inherit;
+        padding-bottom: 2em;
     }
 }

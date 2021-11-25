@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos css/establecimientos.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/funcion.js"></script>
     <title>Establecimientos</title>
 </head>
 
@@ -55,12 +57,16 @@
             <article>
                 <h2 class="titulo-secundario">Establecimientos</h2> 
                 <div>
-                    <input class="filtrar-provincia" type="search" placeholder="Filtrar por provincia">
+                    <select name="lugar" id="lugar">
+                        <option value="0" >Seleccione Zona</option>
+                        <option value="1">C.A.B.A</option>
+                        <option value="2">La Matanza</option>
+                    </select>
                 </div>
             </article>
-            <article class="establecimiento">
+            <article class="establecimiento" id="lamatanza">
                 <img src="img/sanjusto.png" alt="Sede San Justo">
-                <div>
+                <div >
                     <h3 class="h3sede">Sede San Justo</h3>
                     <ul>
                         <li>Dirección: Pres. Juan Domingo Perón 3103</li>
@@ -70,9 +76,9 @@
                    <a href="../tp integrador/sedesanjusto.html"> <button type="button" class="boton-sede">Ver Detalle </button> </a>
                 </div>
             </article>
-            <article class="establecimiento">
+            <article class="establecimiento" id="caba">
                 <img src="img/mataderos.png" alt="Sede Mataderos">
-                <div>
+                <div >
                     <h3 class="h3sede">Sede Mataderos</h3>
                     <ul>
                         <li>Dirección: Av. Emilio Castro 7483</li>
@@ -82,9 +88,9 @@
                     <a href="../tp integrador/sedesanjusto.html"> <button type="button" class="boton-sede">Ver Detalle </button> </a>
                 </div>
             </article>
-            <article class="establecimiento">
+            <article class="establecimiento" id="lamatanza1">
                 <img src="img/catan.png" alt="Sede Catan">
-                <div>
+                <div >
                     <h3 class="h3sede">Sede Catán</h3>
                     <ul>
                         <li>Dirección: Av. Brig. Gral. Juan Manuel de Rosas 14.457</li>
@@ -94,9 +100,9 @@
                     <a href="../tp integrador/sedesanjusto.html"> <button type="button" class="boton-sede">Ver Detalle </button> </a>
                 </div>
             </article>
-            <article class="establecimiento">
+            <article class="establecimiento" id="caba1">
                 <img src="img/caba.png" alt="Sede Belgrano">
-                <div>
+                <div >
                     <h3 class="h3sede">Sede Belgrano</h3>
                     <ul>
                         <li>Dirección: Av. Cabildo 2009</li>

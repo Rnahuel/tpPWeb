@@ -16,10 +16,11 @@ $(document).ready(function(){
   
   });
 
-  $("#form").submit(function (validar){
-    validar(validar);
-    validar.preventDefault();
-});
+  $("#botonForm").click(function(e){
+    validar();
+    e.preventDefault();
+  });
+
 });
 
 
@@ -48,7 +49,7 @@ function cambiar(){
 
 }
 
-function filtrar(){
+/*function filtrar(){
   let sede=$("#sedeFiltro").val();
   let idioma=$("#idiomaFiltro").val();
 
@@ -56,7 +57,7 @@ function filtrar(){
   $(`#imgsede .${sede}.${idioma}`).show();
   $("#psede").hide();
   $(`#psede .${sede}.${idioma}`).show();
-}
+}*/
 
 /*filtrar solo por establecimiento*/
 function filtrar(){
@@ -76,14 +77,14 @@ function filtrar(){
   let imgSanJustoJapones=$("#japones1");
   let sedesSanjustoItaliano=$("#psedeItaliano1");
   let imgSanJustoItaliano=$("#italiano1");
-  let sedesCatanItaliano=$("#psede");
-  let imgCatanItaliano=$("#portugues1");
-  let sedesCatanJapon=$("#psede");
-  let imgCatanJapon=$("#portugues1");
-  let sedesMataderosIngles=$("#psede");
-  let imgMataderosIngles=$("#portugues1");
-  let sedesMataderosPortugues=$("#psede");
-  let imgMataderosPortugues=$("#portugues1");
+  let sedesCatanItaliano=$("#psedeItaliano2");
+  let imgCatanItaliano=$("#italiano2");
+  let sedesCatanJapon=$("#psedeJapones2");
+  let imgCatanJapon=$("#japones2");
+  let sedesMataderosIngles=$("#psedeIngles2");
+  let imgMataderosIngles=$("#ingles2");
+  let sedesMataderosPortugues=$("#psedePortugues2");
+  let imgMataderosPortugues=$("#portugues2");
 
 
   if(sedesV==0 && idiomaF==0){
@@ -92,11 +93,27 @@ function filtrar(){
   }
 
   if(sedesV== 0 && idiomaF==0){
-    sedesMarzo.show();
+    sedesBelgranoIngles.show();
+    imgBelgranoIngles.show();
+    sedesBelgranoPortugues.show();
+    imgBelgranoPortugues.show();
+    sedesSanjustoItaliano.show();
+    imgSanJustoItaliano.show();
+    sedesSanjustoJapones.show();
+    imgSanJustoJapones.show();
+    sedesCatanItaliano.show();
+    imgCatanItaliano.show();
+    sedesCatanJapon.show();
+    imgCatanJapon.show();
+    sedesMataderosIngles.show();
+    imgMataderosIngles.show();
+    sedesMataderosPortugues.show();
+    imgMataderosPortugues.show();
+    
   }
 
   if(sedesV=="belgrano" && idiomaF=="ingles"){
-    console.log("mensajexD");
+
     sedesAbril.hide();
     sedesBelgranoIngles.show();
     imgBelgranoIngles.show();
@@ -106,44 +123,137 @@ function filtrar(){
     imgSanJustoItaliano.hide();
     sedesSanjustoJapones.hide();
     imgSanJustoJapones.hide(); 
+  }else if(sedesV=="belgrano" && idiomaF=="portugues"){
+    sedesAbril.hide();
+    sedesBelgranoIngles.hide();
+    imgBelgranoIngles.hide();
+    sedesBelgranoPortugues.show();
+    imgBelgranoPortugues.show();
+    sedesSanjustoItaliano.hide();
+    imgSanJustoItaliano.hide();
+    sedesSanjustoJapones.hide();
+    imgSanJustoJapones.hide(); 
   }
 
-  if(sedesV=="catan" && idiomaF== ""){
-    
-  }
-  if(sedesV=="mataderos"){
-   
-  }
-  if(sedesV=="san justo"){
-    
+  if(sedesV=="catan" && idiomaF== "italiano"){
+    sedesMarzo.hide();
+    sedesCatanItaliano.show();
+    imgCatanItaliano.show();
+    sedesCatanJapon.hide();
+    imgCatanJapon.hide();
+    sedesMataderosIngles.hide();
+    imgMataderosIngles.hide();
+    sedesMataderosPortugues.hide();
+    imgMataderosPortugues.hide(); 
+  }else if(sedesV=="catan" && idiomaF=="japones"){
+    sedesMarzo.hide();
+    sedesCatanItaliano.hide();
+    imgCatanItaliano.hide();
+    sedesCatanJapon.show();
+    imgCatanJapon.show();
+    sedesMataderosIngles.hide();
+    imgMataderosIngles.hide();
+    sedesMataderosPortugues.hide();
+    imgMataderosPortugues.hide();  
   }
 
+  if(sedesV=="mataderos" && idiomaF=="ingles"){
+    sedesMarzo.hide();
+    sedesCatanItaliano.hide();
+    imgCatanItaliano.hide();
+    sedesCatanJapon.hide();
+    imgCatanJapon.hide();
+    sedesMataderosIngles.show();
+    imgMataderosIngles.show();
+    sedesMataderosPortugues.hide();
+    imgMataderosPortugues.hide();
+  }else if(sedesV=="mataderos" && idiomaF=="portugues"){
+    sedesMarzo.hide();
+    sedesCatanItaliano.hide();
+    imgCatanItaliano.hide();
+    sedesCatanJapon.hide();
+    imgCatanJapon.hide();
+    sedesMataderosIngles.hide();
+    imgMataderosIngles.hide();
+    sedesMataderosPortugues.show();
+    imgMataderosPortugues.show();  
+  }
   
-
+  if(sedesV=="sanJusto" && idiomaF=="italiano"){
+    sedesAbril.hide();
+    sedesBelgranoIngles.hide();
+    imgBelgranoIngles.hide();
+    sedesBelgranoPortugues.hide();
+    imgBelgranoPortugues.hide();
+    sedesSanjustoItaliano.show();
+    imgSanJustoItaliano.show();
+    sedesSanjustoJapones.hide();
+    imgSanJustoJapones.hide();
+  }else if(sedesV=="sanJusto" && idiomaF=="japones"){
+    sedesAbril.hide();
+    sedesBelgranoIngles.hide();
+    imgBelgranoIngles.hide();
+    sedesBelgranoPortugues.hide();
+    imgBelgranoPortugues.hide();
+    sedesSanjustoItaliano.hide();
+    imgSanJustoItaliano.hide();
+    sedesSanjustoJapones.show();
+    imgSanJustoJapones.show(); 
+  }
 }
-  //  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/ validar email   
-
-function validar(validar){
-  let error = false;
-  let mensajesError = "";
-  let nombre = document.getElementById("nombre");
- if(nombre.value=""){
-   error = true;
-   mensajesError+= "<p> El nombre es obligatorio </p>";
- } 
- if(nombre.value.lenght < 4 || nombre.value.lenght > 20){
-   error = true;
-   mensajesError = "<p> Ingrese una cantidad válida de caracteres </p>";
- }
  
+  function validar(){
 
- if(document.getElementById("sede").value == 0){
-  error = true;
-  mensajesError+= "<p> La sede es obligatoria </p>";
- }
+    let error= false;
+    let regexEmail = /^[0-9a-zA-Z..-]+@[0-9a-zA-Z..-]+.[0-9a-zA-Z]+$/;
+    
+    $("#mensaje").empty();
+    $("#nombreForm, #telefono, #provincia, #apellido, #correo, #ciudad").removeClass();
+    
+    if($("#nombreForm").val()==""){
+      error= true;
+      $("#mensaje").append("<p> El nombre es obligatorio </p>").addClass("errorLetra");
+      $("#nombreForm").addClass("error");
+    } else  if (($("#nombreForm").val().length < 4) || ($("#nombreForm").val().length > 20)) {
+      error= true;
+      $("#mensaje").append("<p> El nombre debe tener entre 4 y 20 caracteres </p>").addClass("errorLetra");
+      $("#nombreForm").addClass("error");
+    }
+ 
+    if($("#telefono").val()==""){
+      error= true;
+      $("#mensaje").append("<p> El telefono es obligatorio </p>").addClass("errorLetra");
+      $("#telefono").addClass("error");
+    }
+    
+    if($("#provincia").val()==""){
+      error= true;
+      $("#mensaje").append("<p> La provincia es obligatoria </p>").addClass("errorLetra");
+      $("#provincia").addClass("error");
+    }
 
-if(document.getElementById("consulta").value == ""){
-  error = true;
-   mensajesError+= "<p> Escriba alguna consulta </p>";
+    if($("#apellido").val()==""){
+      error= true;
+      $("#mensaje").append("<p> El apellido es obligatorio </p>").addClass("errorLetra");
+      $("#apellido").addClass("error");
+    }
+
+    if($("#correo").val()==""){
+      error= true;
+      $("#mensaje").append("<p> El correo es obligatorio </p>").addClass("errorLetra");
+      $("#correo").addClass("error");
+    }else if ($("#correo").val().match(regexEmail)) {
+      error= false;
+    }else{
+      error= true;
+      $("#mensaje").append("<p> Debe ingresar un email valido </p>").addClass("errorLetra");
+      $("#correo").addClass("error");
+    }
+
+    if ($("#ciudad").val()==""){
+      error= true;
+      $("#mensaje").append("<p> La ciudad es obligatoria </p>").addClass("errorLetra");
+      $("#ciudad").addClass("error");
+  }
 }
-}
+

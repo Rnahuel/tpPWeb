@@ -17,13 +17,11 @@ $(document).ready(function () {
   });
 
   $("#botonForm").click(function (e) {
-    validar();
-    e.preventDefault();
+    validar(e);
   });
 
   $("#btnContacto").click(function (e) {
-    validarCt();
-    e.preventDefault();
+    validarCt(e);
   });
 });
 
@@ -195,7 +193,7 @@ function filtrar() {
   }
 }
 
-function validar() {
+function validar(e) {
 
   let error = false;
   let regexTelefono = /^[0-9]{4}-[0-9]{4}$/;
@@ -256,9 +254,13 @@ function validar() {
     $("#mensaje").append("<p> La ciudad es obligatoria </p>").addClass("errorLetra");
     $("#ciudad").addClass("error");
   }
+
+  if (error) {
+    e.preventDefault();
+  }
 }
 
-function validarCt() {
+function validarCt(e) {
   let error = false;
   let regexEmail = /^[0-9a-zA-Z..-]+@[0-9a-zA-Z..-]+.[0-9a-zA-Z]+$/;
 
@@ -293,4 +295,12 @@ function validarCt() {
     $("#mensajeContacto").append("<p> Debe escribir su consulta </p>").addClass("errorLetra");
     $("#consultaContacto").addClass("error");
     }
+
+  if (error) {
+      e.preventDefault();
+   }
+
+  if (error == false) {
+    window.alert("Envio Exitoso");
   }
+ }

@@ -17,6 +17,9 @@ $(document).ready(function(){
   
   });
 
+  $("#botonForm").click(function(){
+    validar();
+  });
 
 });
 
@@ -46,7 +49,7 @@ function cambiar(){
 
 }
 
-function filtrar(){
+/*function filtrar(){
   let sede=$("#sedeFiltro").val();
   let idioma=$("#idiomaFiltro").val();
 
@@ -54,10 +57,10 @@ function filtrar(){
   $(`#imgsede .${sede}.${idioma}`).show();
   $("#psede").hide();
   $(`#psede .${sede}.${idioma}`).show();
-}
+}*/
 
 /*filtrar solo por establecimiento*/
-/*function filtrar(){
+function filtrar(){
 
 
   let sedesV= $("#sedeFiltro").val();
@@ -195,24 +198,60 @@ function filtrar(){
     sedesMataderosPortugues1.hide();
     
   }
-
-  
-
 }
-  
-
-
-
-  
-
-
-
-
-
-
+ 
   //  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/ validar email   
+ /* function validar(validar){
+    let error = false;
+    let mensajesError = "";
+    let nombre = document.getElementById("nombreForm");
+    let regexTelefono = /^[0-9]{4}-[0-9]{4}$/;
+    let rEmail = /^[0-9a-zA-Z..-]+@[0-9a-zA-Z..-]+.[0-9a-zA-Z]+$/;
+
+   if(nombre.value==""){
+     error = true;
+     mensajesError+= "<p> El nombre es obligatorio </p>";
+   } 
+   if(nombre.value.lenght < 4 || nombre.value.lenght > 20){
+     error = true;
+     mensajesError = "<p> Ingrese una cantidad válida de caracteres </p>";
+   }
+   
+  
+   if(document.getElementById("sede").value ==""){
+    error = true;
+    mensajesError+= "<p> La sede es obligatoria </p>";
+   }
+  
+  if(document.getElementById("consulta").value == ""){
+    error = true;
+    mensajesError+= "<p> Escriba alguna consulta </p>";
+  }*/
+ 
+  function validar(){
+
+    let error= false;
+    $("#mensaje").empty();
+    $("#telefono, #nombreForm, #provincia, #apellido, #correo, #ciudad").removeClass();
+    if($("#nombreForm").val()==""){
+      error= true;
+      $("#mensaje").append("<p> El nombre es obligatorio </p>");
+      $("#nombreForm").addClass("error");
+    }
+    
+    if($("#telefono").val()==""){
+      error= true;
+      $("#mensaje").append("<p> El telefono es obligatorio </p>");
+      $("#telefono").addClass("error");
+    }
+    
+    if($("#nombreForm").val()==""){
+      error= true;
+      $("#mensaje").append("<p> El nombre es obligatorio </p>");
+      $("#nombreForm").addClass("error");
+    }
+
+  }
 
 
-
-
-*/
+  

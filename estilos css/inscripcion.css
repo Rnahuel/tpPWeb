@@ -182,3 +182,8 @@ footer{
     margin-top: 2em;
     width: 10em;
 }
+
+.error{
+    color: #f38080;
+    background-color: #f38080;
+}

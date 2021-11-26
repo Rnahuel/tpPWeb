@@ -57,13 +57,13 @@
             <h2>Contacto</h2>
             <form id="form" action="#" method=GET>
                 <label for="nombre"> Nombre y apellido: </label>
-                <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required autofocus>
+                <input type="text" id="nombreContacto" name="nombre" placeholder="Ingrese su nombre" required autofocus>
                 <br>
                 <label for="correo"> Correo: </label>
-                <input type="email" id="correo" name="correo" placeholder="Correo" required>
+                <input type="email" id="correoContacto" name="correo" placeholder="Correo" required>
                 <br>
                 <label for="sede"> Sede de interés: </label>
-                <select name="sede" id="sede">
+                <select name="sede" id="sedeContacto">
                     <option value="0">Seleccione su sede de interés...</option>
                     <option value="1">Belgrano - C.A.B.A.</option>
                     <option value="2">Catán - La Matanza</option>
@@ -73,9 +73,10 @@
                 <br>
                 <label for="consulta">Su consulta: </label>
                 <br>
-                <textarea name="consulta" id="consulta" cols="60" rows="10" maxlenght="200"></textarea>
+                <textarea name="consulta" id="consultaContacto" cols="60" rows="10" maxlenght="1000"></textarea>
                 <br><br>
-                <input type="button" value="Enviar" class="botoncito" id="botoncito">
+                <input type="button" value="Enviar" class="botoncito" id="btnContacto">
+                <div id="mensajeContacto"></div>
             </form>
         </article>
         <article>

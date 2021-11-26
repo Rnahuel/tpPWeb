@@ -142,3 +142,11 @@ footer{
 .achicarMapa{
    padding: 5em;
 }
+
+.error{
+   background-color: #f5bfbf;
+}
+
+.errorLetra{
+   color: #f38080;
+}

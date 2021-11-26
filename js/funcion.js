@@ -1,5 +1,3 @@
-
-
 $(document).ready(function(){
   
   $("#lugar").change(function(){
@@ -12,12 +10,16 @@ $(document).ready(function(){
   
 
 
-  $("#filtrando").click(function(){
+  $("#filtrando").click(function(e){
     filtrar();
+    e.preventDefault();
   
   });
 
-
+  $("#form").submit(function (validar){
+    validar(validar);
+    validar.preventDefault();
+});
 });
 
 
@@ -57,162 +59,91 @@ function filtrar(){
 }
 
 /*filtrar solo por establecimiento*/
-/*function filtrar(){
+function filtrar(){
 
-
+  /*Sede e Idioma Filtro */
   let sedesV= $("#sedeFiltro").val();
-  let ingles= $("#idiomaIngles");
-  let italiano=$("#idiomaItaliano");;
-  let japones=$("#idiomaJapones");;
-  let portugues=$("#idiomaPortugues");;
-  let sedesBelgranoPortugues=$("#belgranoPortugues");
-  let sedesBelgranoPortugues1=$("#belgranoPortugues1");
-  let sedesBelgranoIngles=$("#belgranoIngles");
-  let sedesBelgranoIngles1=$("#belgranoIngles1");
-  let sedesSanjustoJapones=$("#sanjustoJapones");
-  let sedesSanjustoJapones1=$("#sanjustoJapones1");
-  let sedesSanjustoItaliano=$("#sanjustoItaliano");
-  let sedesSanjustoItaliano1=$("#sanjustoItaliano1");
-  let sedesCatanItaliano=$("#catanItaliano");
-  let sedesCatanItaliano1=$("#catanItaliano1");
-  let sedesCatanJapon=$("#catanJapon");
-  let sedesCatanJapon1=$("#catanJapon1");
-  let sedesMataderosIngles=$("#mataderosIngles");
-  let sedesMataderosIngles1=$("#mataderosIngles1");
-  let sedesMataderosPortugues=$("#mataderosPortugues");
-  let sedesMataderosPortugues1=$("#mataderosPortugues1");
+  let idiomaF= $("#idiomaFiltro").val();
+  /*Bloque de Abril y Marzo separados*/ 
+  let sedesAbril= $("#allSedes2");
+  let sedesMarzo= $("#allSedes");
+  /*Sedes e imagenes*/
+  let sedesBelgranoPortugues=$("#psedePortugues1");
+  let imgBelgranoPortugues=$("#portugues1");
+  let sedesBelgranoIngles=$("#psedeIngles1");
+  let imgBelgranoIngles=$("#ingles1");
+  let sedesSanjustoJapones=$("#psedeJapones1");
+  let imgSanJustoJapones=$("#japones1");
+  let sedesSanjustoItaliano=$("#psedeItaliano1");
+  let imgSanJustoItaliano=$("#italiano1");
+  let sedesCatanItaliano=$("#psede");
+  let imgCatanItaliano=$("#portugues1");
+  let sedesCatanJapon=$("#psede");
+  let imgCatanJapon=$("#portugues1");
+  let sedesMataderosIngles=$("#psede");
+  let imgMataderosIngles=$("#portugues1");
+  let sedesMataderosPortugues=$("#psede");
+  let imgMataderosPortugues=$("#portugues1");
 
 
-  if(sedesV==0){
-    ingles.show();
-    italiano.show();
-    japones.show();
-    portugues.show();
-    sedesBelgranoPortugues.show();
+  if(sedesV==0 && idiomaF==0){
+    sedesAbril.show();
+    sedesMarzo.show();
+  }
+
+  if(sedesV== 0 && idiomaF==0){
+    sedesMarzo.show();
+  }
+
+  if(sedesV=="belgrano" && idiomaF=="ingles"){
+    console.log("mensajexD");
+    sedesAbril.hide();
     sedesBelgranoIngles.show();
-    sedesSanjustoJapones.show();
-    sedesSanjustoItaliano.show();
-    sedesCatanItaliano.show();
-    sedesCatanJapon.show();
-    sedesMataderosIngles.show();
-    sedesMataderosPortugues.show();
-    sedesBelgranoPortugues1.show();
-    sedesBelgranoIngles1.show();
-    sedesSanjustoJapones1.show();
-    sedesSanjustoItaliano1.show();
-    sedesCatanItaliano1.show();
-    sedesCatanJapon1.show();
-    sedesMataderosIngles1.show();
-    sedesMataderosPortugues1.show();
-  }
-  if(sedesV=="Belgrano"){
-    ingles.show();
-    italiano.hide();
-    japones.hide();
-    portugues.show();
-    sedesBelgranoPortugues.show();
-    sedesBelgranoIngles.show();
-    sedesSanjustoJapones.hide();
-    sedesSanjustoItaliano.hide();
-    sedesCatanItaliano.hide();
-    sedesCatanJapon.hide();
-    sedesMataderosIngles.hide();
-    sedesMataderosPortugues.hide();
-    sedesBelgranoPortugues1.show();
-    sedesBelgranoIngles1.show();
-    sedesSanjustoJapones1.hide();
-    sedesSanjustoItaliano1.hide();
-    sedesCatanItaliano1.hide();
-    sedesCatanJapon1.hide();
-    sedesMataderosIngles1.hide();
-    sedesMataderosPortugues1.hide();
-  }
-  if(sedesV=="Catán"){
-    ingles.hide();
-    italiano.show();
-    japones.show();
-    portugues.hide();
+    imgBelgranoIngles.show();
     sedesBelgranoPortugues.hide();
-    sedesBelgranoIngles.hide();
-    sedesSanjustoJapones.hide();
+    imgBelgranoPortugues.hide();
     sedesSanjustoItaliano.hide();
-    sedesCatanItaliano.show();
-    sedesCatanJapon.show();
-    sedesMataderosIngles.hide();
-    sedesMataderosPortugues.hide();
-    sedesBelgranoPortugues1.hide();
-    sedesBelgranoIngles1.hide();
-    sedesSanjustoJapones1.hide();
-    sedesSanjustoItaliano1.hide();
-    sedesCatanItaliano1.show();
-    sedesCatanJapon1.show();
-    sedesMataderosIngles1.hide();
-    sedesMataderosPortugues1.hide();
+    imgSanJustoItaliano.hide();
+    sedesSanjustoJapones.hide();
+    imgSanJustoJapones.hide(); 
   }
-  if(sedesV=="Mataderos"){
-    ingles.show();
-    italiano.hide();
-    japones.hide();
-    portugues.show();
-    sedesBelgranoPortugues.hide();
-    sedesBelgranoIngles.hide();
-    sedesSanjustoJapones.hide();
-    sedesSanjustoItaliano.hide();
-    sedesCatanItaliano.hide();
-    sedesCatanJapon.hide();
-    sedesMataderosIngles.show();
-    sedesMataderosPortugues.show();
-    sedesBelgranoPortugues1.hide();
-    sedesBelgranoIngles1.hide();
-    sedesSanjustoJapones1.hide();
-    sedesSanjustoItaliano1.hide();
-    sedesCatanItaliano1.hide();
-    sedesCatanJapon1.hide();
-    sedesMataderosIngles1.show();
-    sedesMataderosPortugues1.show();
+
+  if(sedesV=="catan" && idiomaF== ""){
     
   }
-  if(sedesV=="San Justo"){
-    ingles.hide();
-    italiano.show();
-    japones.show();
-    portugues.hide();
-    sedesBelgranoPortugues.hide();
-    sedesBelgranoIngles.hide();
-    sedesSanjustoJapones.show();
-    sedesSanjustoItaliano.show();
-    sedesCatanItaliano.hide();
-    sedesCatanJapon.hide();
-    sedesMataderosIngles.hide();
-    sedesMataderosPortugues.hide();
-    sedesBelgranoPortugues1.hide();
-    sedesBelgranoIngles1.hide();
-    sedesSanjustoJapones1.show();
-    sedesSanjustoItaliano1.show();
-    sedesCatanItaliano1.hide();
-    sedesCatanJapon1.hide();
-    sedesMataderosIngles1.hide();
-    sedesMataderosPortugues1.hide();
+  if(sedesV=="mataderos"){
+   
+  }
+  if(sedesV=="san justo"){
     
   }
 
   
 
 }
-  
-
-
-
-  
-
-
-
-
-
-
   //  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/ validar email   
 
+function validar(validar){
+  let error = false;
+  let mensajesError = "";
+  let nombre = document.getElementById("nombre");
+ if(nombre.value=""){
+   error = true;
+   mensajesError+= "<p> El nombre es obligatorio </p>";
+ } 
+ if(nombre.value.lenght < 4 || nombre.value.lenght > 20){
+   error = true;
+   mensajesError = "<p> Ingrese una cantidad válida de caracteres </p>";
+ }
+ 
 
+ if(document.getElementById("sede").value == 0){
+  error = true;
+  mensajesError+= "<p> La sede es obligatoria </p>";
+ }
 
-
-*/
+if(document.getElementById("consulta").value == ""){
+  error = true;
+   mensajesError+= "<p> Escriba alguna consulta </p>";
+}
+}

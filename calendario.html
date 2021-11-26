@@ -66,20 +66,25 @@
                     </select>
                     <select name="sede" id="idiomaFiltro">
                         <option value="">Idioma</option>
-                        <option value="ingles" >Inglés</option>
-                        <option value="italiano">Italiano</option>
-                        <option value="japones">Japonés</option>
-                        <option value="portugues">Portugués</option>
+                        <option value="ingles" id="idiomaIngles">Inglés</option>
+                        <option value="italiano" id="idiomaItaliano">Italiano</option>
+                        <option value="japones" id="idiomaJapones">Japonés</option>
+                        <option value="portugues" id="idiomaPortugues">Portugués</option>
                     </select>
                     <input type="submit" value="Enviar" id="filtrando" class="selec2" >
                 </form>
             </article>
         </section>
-        <section class="seccion1">
+        <section class="seccion1" id="allSedes">
             <h2 class="meses">Marzo 2022</h2>
+
+            <!--MARZO 2022-->
             <article class="cuadrantes">
-                <img src="img/italia1.png" alt="italia" class="imagenpequenia sanJusto italiano" id="imgsede">
-                <aside class="letras sanJusto italiano" id="psede">
+                <div id="italiano1" class="cuadrantes">
+                <img src="img/italia1.png" alt="italia" class="imagenpequenia" id="imgsede">
+                </div>
+                <aside class="letras sanJusto italiano" id="psedeItaliano1">
+                    <!--Italiano 1 san justo-->
                     <h3>Italiano - Nivel 1</h3>
                     <ul class="listafooter">
                         <li>Modalidad: Presencial</li>
@@ -90,8 +95,11 @@
                     </ul>
                     <a href="inscripcion.html"> <button type="button" class="boton-sede">Inscribirse</button> </a>
                 </aside>
-                <img src="img/japon1.png" alt="japon" class="imagenpequenia sanJusto japones" id="imgsede">
-                <aside class="letras sanJusto japones" id="psede">
+                <div id="japones1" class="cuadrantes">
+                <img src="img/japon1.png" alt="japon" class="imagenpequenia" id="imgsede">
+                </div>
+                <aside class="letras sanJusto japones" id="psedeJapones1">
+                    <!--Japones 1 san justo-->
                     <h3>Japonés - Nivel 1</h3>
                     <ul class="listafooter">
                         <li>Modalidad: Presencial</li>
@@ -104,8 +112,11 @@
                 </aside>
             </article>
             <article class="cuadrantes">
+                <div id="ingles1" class="cuadrantes">
                 <img src="img/uk1.png" alt="uk" class="imagenpequenia" id="belgrano ingles" id="imgsede">
-                <aside class="letras belgrano ingles" id="psede">
+                </div>
+                <aside class="letras belgrano ingles" id="psedeIngles1">
+                    <!--Ingles 1 belgrano-->
                     <h3>Inglés - Nivel 1</h3>
                     <ul class="listafooter">
                         <li>Modalidad: Presencial</li>
@@ -116,8 +127,11 @@
                     </ul>
                     <a href="inscripcion.html"> <button type="button" class="boton-sede">Inscribirse</button> </a>
                 </aside>
-                <img src="img/brasil1.png" alt="brasil" class="imagenpequenia belgrano portugues" id="imgsede">
-                <aside class="letras belgrano portugues" id="psede">
+                <div id="portugues1" class="cuadrantes">
+                <img src="img/brasil1.png" alt="brasil" class="imagenpequenia" id="imgsede">
+                </div>
+                <aside class="letras belgrano portugues" id="psedePortugues1">
+                    <!--Portugues 1 belgrano-->
                     <h3>Portugués - Nivel 1</h3>
                     <ul class="listafooter">
                         <li>Modalidad: Presencial</li>
@@ -130,11 +144,15 @@
                 </aside>
             </article>
         </section>
-        <section class="seccion1">
+        <section class="seccion1" id="allSedes2">
             <h2 class="meses">Abril 2022</h2>
+        
+            <!--ABRIL 2022-->
             <article class="cuadrantes">
+                <section id="italiano2">
                 <img src="img/italia2.png" alt="italia" class="imagenpequenia catan italiano" id="imgsede">
                 <aside class="letras catan italiano" id="psede">
+                   <!--Italiano 2 catan-->
                     <h3>Italiano - Nivel 2</h3>
                     <ul class="listafooter">
                         <li>Modalidad: Presencial</li>
@@ -145,8 +163,11 @@
                     </ul>
                     <a href="inscripcion.html"> <button type="button" class="boton-sede">Inscribirse</button> </a>
                 </aside>
+                </section>
+                <section id="japones2">
                 <img src="img/japon2.png" alt="japon" class="imagenpequenia catan Japon" id="imgsede">
                 <aside class="letras catan japon" id="psede">
+                    <!--Japones 2 catan-->
                     <h3>Japonés - Nivel 2</h3>
                     <ul class="listafooter">
                         <li>Modalidad: Presencial</li>
@@ -157,10 +178,13 @@
                     </ul>
                     <a href="inscripcion.html"> <button type="button" class="boton-sede">Inscribirse</button> </a>
                 </aside>
+                </section>
             </article>
             <article class="cuadrantes">
+                <section id="ingles2">
                 <img src="img/uk2.png" alt="uk" class="imagenpequenia mataderos ingles" id="imgsede">
                 <aside class="letras mataderos ingles" id="psede">
+                    <!--Ingles 2 mataderos-->
                     <h3>Inglés - Nivel 2</h3>
                     <ul class="listafooter">
                         <li>Modalidad: Presencial</li>
@@ -171,8 +195,11 @@
                     </ul>
                     <a href="inscripcion.html"> <button type="button" class="boton-sede">Inscribirse</button> </a>
                 </aside>
+                </section>
+                <section id="portugues2">
                 <img src="img/brasil2.png" alt="brasil" class="imagenpequenia mataderos portugues" id="imgsede">
                 <aside class="letras mataderos portugues" id="psede">
+                    <!--Portugues 2 mataderos-->
                     <h3>Portugués - Nivel 2</h3>
                     <ul class="listafooter">
                         <li>Modalidad: Presencial</li>
@@ -183,6 +210,7 @@
                     </ul>
                     <a href="inscripcion.html"> <button type="button" class="boton-sede">Inscribirse</button> </a>
                 </aside>
+                </section>
             </article>
         </section>
     </main>

@@ -217,9 +217,9 @@ function validar(e) {
     error = true;
     $("#mensaje").append("<p> El telefono es obligatorio </p>").addClass("errorLetra");
     $("#telefono").addClass("error");
-  }else if (($("#telefono").val().match(regexTelefono)) || ($("#telefono").val().match(regexTelefono2))) {
+  } else if (($("#telefono").val().match(regexTelefono)) || ($("#telefono").val().match(regexTelefono2))) {
     error = false;
-  }else {
+  } else {
     error = true;
     $("#mensaje").append("<p> Debe ingresar un telefono valido </p>").addClass("errorLetra");
     $("#telefono").addClass("error");
@@ -265,6 +265,8 @@ function validarCt(e) {
   let regexEmail = /^[0-9a-zA-Z..-]+@[0-9a-zA-Z..-]+.[0-9a-zA-Z]+$/;
 
   $("#mensajeContacto").empty();
+  $("#contador").empty();
+  $("#contador2").empty();
   $("#nombreContacto, #correoContacto, #sedeContacto, #consultaContacto").removeClass();
 
   if ($("#nombreContacto").val() == "") {
@@ -273,16 +275,17 @@ function validarCt(e) {
     $("#nombreContacto").addClass("error");
   }
   if ($("#correoContacto").val() == "") {
-      error = true;
-      $("#mensajeContacto").append("<p> El correo es obligatorio </p>").addClass("errorLetra");
-      $("#correoContacto").addClass("error");
-    } else if ($("#correoContacto").val().match(regexEmail)) {
-      error = false;
-    } else {
-      error = true;
-      $("#mensajeContacto").append("<p> Debe ingresar un email valido </p>").addClass("errorLetra");
-      $("#correoContacto").addClass("error");
-    }
+    error = true;
+    $("#mensajeContacto").append("<p> El correo es obligatorio </p>").addClass("errorLetra");
+    $("#correoContacto").addClass("error");
+  } else if ($("#correoContacto").val().match(regexEmail)) {
+    error = false;
+    $("#correoContacto").removeClass();
+  } else if (!$("#correoContacto").val().match(regexEmail)) {
+    error = true;
+    $("#mensajeContacto").append("<p> Debe ingresar un email valido </p>").addClass("errorLetra");
+    $("#correoContacto").addClass("error");
+  }
 
   if ($("#sedeContacto").val() == "0") {
     error = true;
@@ -294,13 +297,30 @@ function validarCt(e) {
     error = true;
     $("#mensajeContacto").append("<p> Debe escribir su consulta </p>").addClass("errorLetra");
     $("#consultaContacto").addClass("error");
-    }
+  }
+
+  if ($("#consultaContacto").val().length > 1000) {
+    error = true;
+    $("#consultaContacto").removeClass();
+    $("#contador2").append("<p>El campo Consulta no puede superar los 1000 caracteres</p>").addClass("errorLetra");
+    $("#consultaContacto").addClass("error");
+  }
+
+  if ($("#consultaContacto").val().length < 1001) {
+    $("#consultaContacto").removeClass();
+    $("#contador").append("<p>Contador de palabras " + $("#consultaContacto").val().length + "</p>").removeClass();
+  }
+  if ($("#consultaContacto").val().length > 1000) {
+    error = true;
+    $("#contador").append("<p>Contador de palabras " + $("#consultaContacto").val().length + "</p>").addClass("errorLetra");
+    $("#consultaContacto").addClass("error");
+  }
 
   if (error) {
-      e.preventDefault();
-   }
+    e.preventDefault();
+  }
 
   if (error == false) {
     window.alert("Envio Exitoso");
   }
- }
+}
